@@ -1,17 +1,24 @@
 
 
 
-const btn = document.querySelector('button');
+const btn = document.querySelectorAll('button');
 
+const div1 = document.querySelector('.div1');
 
-
- btn.addEventListener('click',handler1);
+ btn[0].addEventListener('click',handler1);
 
 function handler1(e) {
      e.preventDefault();
   document.documentElement.classList.add("color-eee");
-  btn.classList.add('insetShadow');
-    alert("you have clicked button ");
+  btn[0].classList.add('insetShadow');
+    // alert("you have clicked button ");
+  div1.classList.add("getAnima");
 
+}
 
+btn[1].addEventListener('click',handler2);
+
+function handler2(e) {
+     e.preventDefault();
+    window.location.reload();
 }
